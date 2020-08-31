@@ -41,14 +41,14 @@ Game where player control the racket to keep the ball bounces on top of it until
 <img src="workflow.gif"/>
 
 
-The program work with a typical game loop application. It consists five classes: `Game`, `Ball`, `Racket`, `Controller`, and `Renderer`. The image above shows the workflow of the code:
+The program work with a typical game loop application. It consists of five classes: `Game`, `Ball`, `Racket`, `Controller`, and `Renderer`. The image above shows the workflow of the code:
 
 1. `main` creates `Controller`, `Game`, `Renderer`. `Game` has `Racket`, `Wall`, `Brick` and `Ball` in which the first four contains vector of points where the `Ball` will bounce to (using `Ball::ObstacleExist` and `Ball::UpdateDirection`).
 2. `main` calls `Game::Run` to start the game loop. During the main loop inside `Game::Run`, it will have two states where the `Ball`'s position follows `Racket`'s position until the state `start` becomes  `true`.
 3. `brick` memory is made dynamic by a vector of `SDL_Point` pointer and will delete its memory once the `Ball` bounce to it. (improvement can be made by `brick` to class)
 
 
-## Rubric Point adrressed
+## Rubric Point addressed
 
 ### Loops, Functions, I/O
 | Rubric point  | Location |
